@@ -1,0 +1,136 @@
+.artContainer {
+    height: 100%;
+    height:calc(90% - 40px);
+    height: -moz-calc(90% - 40px);
+    height: -webkit-calc(90% - 40px);
+    min-height:90%;
+ 
+    position: relative;
+    z-index:1;
+    /* background-color:#464040;
+    background-image:url('../interface/slate8.jpg'); */
+    /* background-size:100% 100%; */
+    /* border:8px solid cyan; */
+}
+.art_slider {
+    position: relative;
+    top:0px;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.slide {
+    display:inline-block;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    height:90vh !important;
+}
+
+.swiper {
+    box-sizing: border-box;
+    width:100%;
+    height:90%;
+    box-sizing: border-box;
+    background-color:rgba(0,0,0,0);
+    position: absolute;
+    top:5%;
+    left:0;
+    z-index:10;
+    /* border:8px solid orange; */
+}
+
+.slide img {
+    box-shadow:0 0 10px rgba(0,0,0,1);
+    margin:20px;
+    position: relative;
+    user-select: none;
+    box-sizing: border-box;
+    border:2px solid rgb(158, 103, 103);
+    border-radius:4px;
+}
+
+.l2 {
+z-index:1;
+opacity:.1;
+}
+
+.l1 {
+    z-index:2;
+    opacity:.3;
+}
+
+.c1 {
+
+}
+
+
+.r1 {
+    z-index:4;
+    opacity:.3;
+}
+
+.r2 {
+    z-index:4;
+    opacity:.1;
+}
+
+
+
+.swipeleft {
+    border:8px solid green;
+}
+
+.titleTag {
+   z-index:5;
+    display:inline-block;
+    font-family: 'Merriweather', serif;
+    color:rgb(151, 145, 136);
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    
+  
+    
+}
+
+.tt_title {
+    font-size:1.2em;
+    color:#555555;
+    font-weight: bold;
+    text-align: left;
+    padding-right:20px;
+    box-sizing: border-box;
+    display:inline-block;
+    /* border:1px solid red; */
+   
+}
+.tt_date {
+    display:inline-block;
+    text-align:left;
+    /* border:1px dashed blue; */
+    padding-right:20px;
+    box-sizing: border-box;
+}
+.tt_size {
+   
+    text-align:left;
+    display:inline-block;
+    padding-right:10px;
+    box-sizing: border-box;
+    /* border:1px dotted green; */
+}
+.tt_sold {
+    display:inline-block;
+    text-align:left;
+ 
+
+
+    /* border:1px solid orange; */
+}

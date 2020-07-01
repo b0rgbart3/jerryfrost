@@ -1,0 +1,60 @@
+
+.ui-datepicker {
+ 
+  height: auto;
+  margin: 5px auto 0;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  background-color:white;
+  padding:18px;
+  border-radius:4px;
+  display:none;
+}
+.ui-datepicker-title {
+    text-align:center;
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  width:21px;
+  height:21px;
+  background-repeat: no-repeat;
+  line-height: 600%;
+  overflow: hidden;
+}
+
+.ui-datepicker-prev {
+  float: left;
+  user-select:none;
+  cursor:pointer;
+  background-repeat: no-repeat;
+  background-image: url('../images/calendar_arrow_prev.svg');
+}
+
+.ui-datepicker-prev:hover {
+    background-image: url('../images/calendar_arrow_prev_hi.svg');
+}
+.ui-datepicker-next {
+  float: right;
+  background-position: center 0px;
+  user-select:none;
+  cursor:pointer;
+  background-image: url('../images/calendar_arrow_next.svg');
+}
+
+.ui-datepicker-next:hover {
+    background-image: url('../images/calendar_arrow_next_hi.svg');
+}
+
+input[type='text'].datepicker {
+  
+    user-select:none;
+    cursor:pointer;
+}
+
+th { text-align:left; padding-left:4px;}
+td { padding-left:4px;}

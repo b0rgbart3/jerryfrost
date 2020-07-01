@@ -1,0 +1,452 @@
+
+.titleFramer {
+
+	width:100%;
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	z-index:300;
+	height:90px;
+	overflow: hidden;
+	/* border:2px solid red; */
+
+}
+.titleBox {
+user-select: none;
+cursor: pointer;
+
+padding-top:0px;
+padding-left:0px;
+background-color:#545454;
+box-sizing: border-box;
+position: relative;
+text-align: left;
+}
+/* .titleBox:hover {
+	opacity:1;
+} */
+
+.titleTextBack {
+	display:inline-block;
+	text-align: center;
+	padding-top:8px;
+	user-select: none;
+	cursor: pointer;
+	padding-left:30px;
+	height:90px;
+	box-sizing: border-box;
+	padding-top:21px;
+	margin-left:0;
+	padding-left:0px;
+	padding-right:40px;
+	width:calc(100% - 420px);
+
+}
+.titleTextBack:hover {
+	/* background-image:url('../interface/backarrow_white.svg');
+	background-size:30px 30px;
+	background-position: 0 10px;
+	background-repeat: no-repeat; */
+	background-color:black;
+}
+
+.titleText {
+	display:inline-block;
+	text-align: center;
+	padding-top:8px;
+	user-select: none;
+	cursor: pointer;
+	padding-left:10px;
+	padding-top:21px;
+	height:90px;
+	box-sizing: border-box;
+	
+}
+.titleBox h1 {
+	text-transform: uppercase;
+	font-size:2.5em;
+	font-family: 'Roboto';
+	font-weight:700;
+	color:rgb(255, 255, 255);
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	text-shadow: 2px 2px 14px rgba(0,0,0,.3);	
+}
+
+.titleBox h2 {
+	font-size:1.6em;
+	line-height:1.8em;
+	font-family:'Roboto',sans-serif;
+	text-transform: uppercase;
+	color:rgb(194, 194, 194);
+	font-weight:700;
+	letter-spacing: 6px;
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+.titleTextContainer {
+display:inline-block;
+user-select: none;
+float:left;
+margin-left:20px;
+box-sizing: border-box;
+}
+/* .titleBox:hover h1 {
+	text-shadow: 2px 2px 16px rgba(0,0,0,.5);
+} */
+
+.burger {
+	float:right;
+	width:100px;
+	height:90px;
+	box-sizing: border-box;
+	background-color:#555555;
+	background-image:url('../interface/burger.svg');
+	background-size:60px 60px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	position: absolute;
+	top:0;
+	right:0;
+	box-sizing: border-box;
+	background-color:rgba(0,0,0,.5);
+
+}
+
+.burger:hover {
+	background-color:black;
+}
+
+.burgerSelected {
+	background-color:black;
+}
+.navigation {
+padding-top:0px;
+margin-top:0px;
+z-index: 502;
+background-color:#717171;
+display:none;
+border:2px solid #555555;
+box-shadow:0 4px 18px rgba(0,0,0,.5);
+border:2px solid black;
+position: absolute;
+right:0;
+top:90px;
+}
+
+.navigation ul {
+	list-style: none;
+	padding:0;
+	margin:0;
+font-size:1.2em;
+
+}
+
+.navigation ul li {
+	display:inline-block;
+	box-sizing: border-box;
+	padding:8px;
+	border:2px solid rgba(100,100,100,.01);
+	user-select: none;
+	cursor:pointer;
+	text-transform: uppercase;
+	padding-left:8px;
+	padding-right:8px;
+	font-size:1.14em;
+	letter-spacing: 1px;
+	font-weight: 500;
+	background-color:#bbbbbb;
+	z-index: 502;
+	
+}
+
+.navigation ul li:hover {
+	background-color:black;
+	color:white;
+}
+
+.catalogLink {
+	display:inline-block;
+	width:100px;
+	height:90px;
+
+	background-image:url('../interface/catalog_simple.svg');
+	background-position: 50% 50%;
+	background-size:50px 50px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top:0;
+	right: 320px;
+	box-sizing: border-box;
+}
+
+.catalogLink:hover {
+	background-color:black;
+}
+
+.mySelector {
+	display:inline-block;
+	width:220px;
+	max-width:220px;
+	color:black;
+	box-sizing: border-box;
+	user-select: none;
+	cursor: pointer;
+	z-index: 500;
+	position: absolute;
+	top:0px;
+	right:30px;
+	box-sizing: border-box;
+	margin:0;
+	margin-right:70px;
+	border:none;
+}
+
+.mySelector h1 {
+	font-size:1.8em;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	border:none;
+}
+
+.mySelectorDownArrow {
+		background-image:url('../interface/down.svg');
+	background-size:20px 20px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width:20px;
+	height:20px;
+	display:inline-block;
+	float:right;
+	margin-right:30px;
+	margin-top:6px;
+}
+
+.gradient {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e0e0e0+100 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #e0e0e0 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ffffff 0%,#e0e0e0 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ffffff 0%,#e0e0e0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
+
+}
+.mySelectorTop {
+	
+width:100%;
+	height:90px;
+	user-select: none;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size:1.4em;
+	font-weight: 500;
+	text-align: left;
+	padding-top:10px;
+	padding-left:38px;
+	text-transform: uppercase;
+	/* background-image:url('../interface/down.svg');
+	background-size:20px 20px;
+	background-repeat: no-repeat;
+	background-position: 90% 12px; */
+	box-sizing: border-box;
+	background-color:#777777;
+	color:white;
+	text-align:left;
+
+	padding-top:40px;
+	box-shadow:0 0px 4px rgba(0,0,0,.3);
+	border:none;
+	border-left:2px solid black;
+	border-right:2px solid black;
+}
+.mySelectorTop:hover {
+		
+		background-color:black;
+		
+}
+.mySelections {
+	width:220px;
+ text-align: left;
+ box-sizing: border-box;
+ padding-top:24px;
+ position: relative;
+ background-color:#dddddd;
+	border:2px solid #888888;
+ overflow: hidden;
+ box-shadow:0 4px 10px rgba(0,0,0,.8);
+ display:none;
+}
+.mySelectorItem {
+	width:100%;
+	font-size:1.1em;
+	height:50px;
+	background-color:#dddddd;
+	text-transform: uppercase;
+	font-weight: 500;
+	padding-left:0px;
+	box-sizing: border-box;
+	padding-top:14px;
+	text-align: left;
+	padding-left:14px;
+	border-bottom:4px solid #dddddd;
+	color:#888888;
+}
+
+.mySelectorItem:hover {
+	background-color:white;
+	border-bottom:4px solid red;
+	color:black;
+}
+
+h1.categoryTitle {
+	font-size:1.6em;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	padding-top:18px;
+	margin-top:0px;
+	color:#aeaeae;
+	box-sizing: border-box;
+	font-weight: 500;
+	z-index: 10;
+	text-align: left;
+	padding-left:20px;
+	height:30px;
+	position: relative;
+	top:-50px;
+	left:20px;
+	width:60%;
+	user-select: none;
+	cursor: pointer;
+}
+
+.next {
+	background-image:url('../interface/next.svg');
+	background-size:110px 120px;
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	display:inline-block;
+	width:150px;
+	height:130px;
+	box-sizing: border-box;
+	position: absolute;
+	top:30%; 
+	right:2px;
+	user-select: none;
+	cursor: pointer;
+	z-index:300;
+}
+
+.prev {
+	background-image:url('../interface/prev.svg');
+	background-size:110px 120px;
+	background-position: 0% 50%;
+	background-repeat: no-repeat;
+	display:inline-block;
+	width:150px;
+	height:130px;
+	box-sizing: border-box;
+	position: absolute;
+	top:30%; 
+	left:2px;
+	user-select: none;
+	cursor: pointer;
+	z-index:300;
+}
+
+.next:hover {
+	background-image:url('../interface/next_hi.svg');
+
+}
+.next:active {
+	background-image: url('../interface/next_down.svg');
+}
+.prev:hover {
+	background-image:url('../interface/prev_hi.svg');
+
+}
+.prev:active {
+	background-image: url('../interface/prev_down.svg');
+}
+
+.completeTitle {
+	/* border:4px solid orange; */
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+
+}
+
+@media only screen and (max-width: 820px) {
+	.catalogLink { 
+		display:none;
+	}
+	.titleTextBack {
+	
+		width:calc(100% - 100px);
+	}
+	.mySelections {
+		width:100%;
+		
+	}
+	.mySelector {
+		margin:0;
+		width:100%;
+		max-width:100%;
+		box-sizing: border-box;
+		top:90px;
+		left:0;
+
+		margin-bottom:20px;
+	}
+	.mySelectorTop {
+		padding-top:20px;
+		padding-bottom:14px;
+		height:60px;
+		border:2px solid black;
+	
+	}
+	.titleTextContainer h1{
+		font-size:2em;
+
+	}
+/* 
+
+
+	.navigation {
+		margin-top:90px;
+		z-index:500;
+		position: absolute;
+	}
+
+	.categoryTitle { 
+		position: relative;
+		top:80px;
+		height:100px;
+		text-align:center;
+		width:90%;
+		color:black;
+		font-size:1.7em;
+	}
+
+
+	.mySelectorItem { 
+		text-align: center;
+		padding-left:0;
+		font-size:1.4em;
+		height:60px;
+	}
+
+	.titleTextContainer {
+
+		
+	}
+
+
+	.titleFramer {
+		position: fixed;
+	} */
+
+}
