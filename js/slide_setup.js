@@ -1,6 +1,6 @@
 
 let setupSlider = function() {
-    console.log('setting up slide');
+    console.log('setting up slide in setupSlider');
     window.sliding = false;
     let wwidth = $('.artContainer').width(); // window.innerWidth;
     let wheight = $('.artContainer').height(); //window.innerHeight;
@@ -13,6 +13,7 @@ let setupSlider = function() {
     let c1left = centerl - (mainwidth / 2);
     let c1top = c1.position().top;
 
+    console.log("1/2 way through setup");
     c1.css({left: c1left, width: mainwidth, height:mainheight, top:10});
     window.c1left = c1left;
 

@@ -9,17 +9,17 @@ let sizeImage=function(sliderDiv, activeImage) {
     let thisImage = new Image();
     thisImage.src = activeImage; 
 
-    console.log("This Image width: " + thisImage.width);
+    //console.log("This Image width: " + thisImage.width);
     let margins = 20;
     let originalwidth = thisImage.width;
     let originalheight = thisImage.height;
 
 
     let divWidth = sliderDiv.width();
-    let divHeight = sliderDiv.height();
+    let divHeight = sliderDiv.height()*.8;
     let topMargin = 0;
-   // console.log('original width: ' + originalwidth);
-   // console.log('activeImage: '+activeImage);
+   //console.log('original width: ' + originalwidth);
+   //console.log('activeImage: '+activeImage);
    
    
 //    if (originalwidth < 300) {
@@ -34,7 +34,7 @@ let sizeImage=function(sliderDiv, activeImage) {
 
    
     if (thisImage.width > thisImage.height) {
-        //console.log('landscape');
+       // console.log('landscape');
         thisImage.width = divWidth  - (margins*2);
         let percentage = thisImage.width / originalwidth;
         let newheight = thisImage.height * percentage;
@@ -50,8 +50,9 @@ let sizeImage=function(sliderDiv, activeImage) {
             topMargin = (divHeight - thisImage.height) / 4;
         }
     } else {
-        //console.log('portrait');
+       // console.log('portrait: divHeight=' + divHeight);
         thisImage.height = divHeight - (margins*2);
+      //  console.log("imagHeight: " + thisImage.height);
         let percentage = thisImage.height / originalheight;
         let newwidth = thisImage.width * percentage;
         thisImage.width = newwidth;
@@ -71,7 +72,7 @@ let sizeImage=function(sliderDiv, activeImage) {
         // it finishes loading.
 
         thisImage.onload = function() {
-        console.log('loaded this image: ' + this.width);
+     //   console.log('loaded this image: ' + this.width);
             location.reload();
         };
     }

@@ -1,5 +1,5 @@
 <?php 
-$isLocal = false;
+$isLocal = true;
 include_once "scripts/pathinfo.php";
 // This is the path to load css and js files
 $resource_path = get_resource_path($isLocal);

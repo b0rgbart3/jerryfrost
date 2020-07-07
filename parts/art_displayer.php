@@ -34,11 +34,11 @@
 
 
     <div class='titleTag'>
-    <div class='tt_title'><?php echo $work->title; ?></div>
-    <div class='tt_date'><?php echo $work->humanReadableCreatedDate(); ?></div>
-        <div class='tt_size'>
+    <div class='tt_title' id="tt_title"><?php echo $work->title; ?></div>
+    <div class='tt_date' id="tt_date"><?php echo $work->humanReadableCreatedDate(); ?></div>
+        <div class='tt_size' id="tt_size">
         </div>   
-        <div class='tt_sold'></div>
+        <div class='tt_sold' id="tt_sold"></div>
 </div>
 
 <script src='js/config.js'></script>

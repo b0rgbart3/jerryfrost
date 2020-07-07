@@ -47,7 +47,7 @@ $( document ).ready(function() {
     
     let bottom = $('#swiper').position().top + $('#swiper').height();
 
-    $('.titleTag').css({'top':bottom*.98});
+    $('.titleTag').css({'top':"-60px"});
 
 
     checkMobile();
@@ -68,6 +68,7 @@ $( document ).ready(function() {
     else {
       mobileSliderLayout();
     }
+    slideFit();
 });
 
 let mobileSliderLayout = function() {
@@ -116,7 +117,9 @@ console.log('have an id in mind.');
 }
   
 let loaded=function( ) {
-  
+
+  // use exact imageID instead of all this find BS
+
   sizeObject = sizeImage(window.c1, window.c1.find('img').attr('src'));
   window.c1.find('img').css(sizeObject);
   window.c1.css({opacity: 1});
@@ -127,10 +130,12 @@ let loaded=function( ) {
 
 let slideFit = function() {
 
-  let title_div = $('.tt_title');
+  let title_div = $('#tt_title');
 
-   title_div.html( $(window.currentWork).data('title') );
-    let date_div = $(".tt_date");
+  var title_text = $(window.currentWork).data('title');
+  console.log("Title: " + title_text);
+   title_div.text(  title_text );
+    let date_div = $("#tt_date");
 
    date_div.html( $(window.currentWork).data('created') );
 
@@ -161,7 +166,7 @@ let slideFit = function() {
 
 
 let slideDisplay = function() {
- //   console.log('in slideDisplay');
+   console.log('in slideDisplay');
     let cW = window.currentId;
    // console.log(cW);
 //console.log(window.c1.find('img').attr('src'));
@@ -171,10 +176,10 @@ let slideDisplay = function() {
   // window.c1.firstChild.setAttribute("height", "200px");
 
     //window.c1.style.setAttribute({ 'opacity': 1});
-    var centralImage = getElementById("centralImage");
+   // var centralImage = document.getElementById("art_slider");  //centralImage
 
-    centralImage.style.width = "100px";
-    centralImage.style.height = "100px";
+    // centralImage.style.width = "100px";
+    // centralImage.style.height = "100px";
     let title_div = $('.tt_title');
    title_div.html( $(window.currentWork).data('title') );
     let date_div = $(".tt_date");

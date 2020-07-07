@@ -10,7 +10,7 @@ let  update_work_number_in_url = function() {
 }
 let findWork=function() {
   let foundWork = null;
-  console.log('looking for: ' + window.currentId);
+  // console.log('looking for: ' + window.currentId);
   for (let i =0; i < window.works.length; i++) {
     if ($(window.works[i]).data('id') == window.currentId) {
       foundWork = window.works[i];
