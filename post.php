@@ -27,6 +27,7 @@ $newwork = [ /*id*/ '0', 'title',$today, /*width*/'',/*height*/ '', /*category*/
 // we are proccessing a post request
 $error = processPost();
 header("Location: review.php"); /* Redirect browser */
+exit();
 
 ?>
 <html>

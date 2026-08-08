@@ -29,7 +29,6 @@ function processPost() {
       }
       if (count($error_array)>0) {
          // echo "There was an issue with the image:";
-        print_r('there was an issue with the image');
       }
       return $error_array;
 }
@@ -45,17 +44,12 @@ function handleImageUploadInfo() {
         $error = check_image_file_for_upload_errors();
 
         if (count($error) < 1) {
-            echo "\nno errors with image so far.<br>\n";
             // upload the file -- and create the new imageObject -- but it is not yet saved
-            $newImage = upload_image_file();  
-           
+            $newImage = upload_image_file();
+
             if ($newImage) {
-             // echo "uploaded image.<br>";
-  
-              
               $_SESSION['newImage'] = $newImage;
               $_SESSION['tmpFile'] = $newImage;
-             echo "<br>Setting tmpFile to: ".$_SESSION['tmpFile']."<br>";
             }
         } else {
             $_SESSION['tmpFile'] = $_FILES['uploadfile']['tmp_name'];
@@ -100,7 +94,6 @@ function check_image_file_for_upload_errors() {
 
     if ($_FILES["uploadfile"]["size"]==0) { array_push($errors, "Your file size was zero.");}
 
-    echo "<br>Errors: ".serialize($errors);
     return $errors;
 }
 

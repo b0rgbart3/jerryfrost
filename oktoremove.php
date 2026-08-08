@@ -19,10 +19,9 @@ if (isset($_GET['id'])) {
         //  echo "Status of removal: ". $message;
 
         if ($message === "Success") {
-          // echo "Successfully removed that painting.<br><br>Click <a href='review.php'>here</a> to go back to the admin page.";
-           header("Location: successful_delete_page.php");
+           header("Location: review.php");
         } else {
-          // echo "There was a problem trying to remove that painting.<br><br>Click <a href='review.php'>here</a> to go back to the admin page.";
           header("Location: error_delete_page.php");
         }
+        exit();
 ?>
