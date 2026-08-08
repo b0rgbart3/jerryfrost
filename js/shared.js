@@ -80,10 +80,10 @@ function setupMenu() {
                // window.location.href = "./catalog.php";
                 break;
             case 'admin':
-               window.location.href = "./review.php"
-            default: 
+               window.location.href = "/admin"
+            default:
                 break;
-   
+
         }
     })
 
@@ -133,8 +133,8 @@ function setupMenu() {
             // window.location.href = "./catalog.php";
              break;
          case 'admin':
-            window.location.href = "./review.php"
-         default: 
+            window.location.href = "/admin"
+         default:
              break;
 
      }

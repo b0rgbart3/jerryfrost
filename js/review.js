@@ -495,7 +495,7 @@ function addCategoryCheckboxes() {
            addCategoryCheckboxes();
 
 
-            fetch('get_json.php')  //names
+            fetch('get_json.php', { cache: 'no-store' })  //names
             .then(response => response.json())
             .then(data => {
 

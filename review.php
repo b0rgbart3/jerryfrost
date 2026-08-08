@@ -63,13 +63,14 @@ if (!$logged_in) {
             <div class='editorClose'> <div class='closeButton' onclick='stopEditing()'></div></div>
             <div class='inputItem'>
               <label name='title' class='inputLabel'>Title:</label>
-              <input type='text' name='inputTitle' id="inputTitle" size='24'></input>
+              <input type='text' name='inputTitle' id="inputTitle" size='24' maxlength='30'></input>
+              <p class='labelTitle hintText'>(30 characters max)</p>
             </div>
             <div class='inputItem'><label name='width'  class='inputLabel'>Width:</label>
-              <input type='text' name='inputWidth' id='inputWidth' size='5'></input>
+              <input type='number' name='inputWidth' id='inputWidth' size='5' min='0' max='1000' step='any'></input>
               <label name='height'  class='inputLabel'>Height:</label>
-              <input type='text' name='inputHeight' id='inputHeight' size='5'></input>
-              <span class='unit inputLabel'>(inches)</span><br/>
+              <input type='number' name='inputHeight' id='inputHeight' size='5' min='0' max='1000' step='any'></input>
+              <span class='unit inputLabel'>(inches, numbers only)</span><br/>
               <br>
             </div>
 

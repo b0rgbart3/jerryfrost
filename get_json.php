@@ -1,4 +1,7 @@
 <?php
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Pragma: no-cache');
+
 $file = 'uploads/generated_list.json';
 
 $json_from_file = [];

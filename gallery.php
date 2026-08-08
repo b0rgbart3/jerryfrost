@@ -56,6 +56,7 @@ if (strpos($requestUri, 'index.php/') !== false) {
                 <li id='contact'>contact jerry</li>
             
                 <!-- <li id='catalog'>full catalog</li> -->
+                <li id='admin'>---</li>
             </ul>
         </div>
         </div>

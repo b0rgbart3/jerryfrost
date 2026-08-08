@@ -21,6 +21,18 @@ $months = [
     'September', 'October', 'November', 'December'
   ];
 
+function sanitize_dimension($value) {
+    $value = preg_replace('/[^0-9.]/', '', (string) $value);
+    $parts = explode('.', $value);
+    if (count($parts) > 2) {
+        $value = $parts[0] . '.' . implode('', array_slice($parts, 1));
+    }
+    if ($value === '' || !is_numeric($value) || (float) $value < 0 || (float) $value > 1000) {
+        return '0';
+    }
+    return $value;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 //    print_r($_POST);
@@ -48,38 +60,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($save_or_remove == 'save') {
 
     if (isset($_POST['inputTitle'])) {
-        $title = preg_replace("/[^a-zA-Z0-9'\s]/", "", $_POST['inputTitle']);
-        if (strlen($title) > 30) {
-            $title = 'Temporary Title';
-        }
+        $title = trim(preg_replace("/[^a-zA-Z0-9'\s]/", "", $_POST['inputTitle']));
+        $title = substr($title, 0, 30);
         }
     if (isset($_POST['inputWidth'])) {
-        $width = $_POST['inputWidth'];
-        if (strlen($width) > 4) {
-            $width = '0';
-        }
+        $width = sanitize_dimension($_POST['inputWidth']);
         }
     if (isset($_POST['inputHeight'])) {
-        $height = $_POST['inputHeight'];
-        if (strlen($height) > 4) {
-            $height = '0';
+        $height = sanitize_dimension($_POST['inputHeight']);
         }
-        }
-    if (isset($_POST['monthSelect'])) {
+    if (isset($_POST['monthSelect']) && in_array($_POST['monthSelect'], $months, true)) {
         $month = $_POST['monthSelect'];
+        } else {
+        $month = date('F');
         }
-    if (isset($_POST['daySelect'])) {
+    if (isset($_POST['daySelect']) && ctype_digit($_POST['daySelect']) && $_POST['daySelect'] >= 1 && $_POST['daySelect'] <= 31) {
         $day = $_POST['daySelect'];
         }
     else {
-        $day = '1';
+        $day = date('j');
     }
-    if (isset($_POST['yearSelect'])) {
+    if (isset($_POST['yearSelect']) && ctype_digit($_POST['yearSelect']) && $_POST['yearSelect'] >= 1900 && $_POST['yearSelect'] <= date('Y') + 1) {
         $year = $_POST['yearSelect'];
-        
-        if (strlen($year) > 4) {
-            $year = '2023';
-        }
+        } else {
+        $year = date('Y');
         }
     if (isset($_POST['sold'])) {
         if ($_POST['sold'] === 'on') {
@@ -103,8 +107,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($title && $id) {
         save_updated_info($id, $title, $width, $height, $month, $day, $year, $chosen_categories, $sold);
-    } 
-    header("Location: successful_edit.php");
+    }
+    header("Location: review.php");
+    exit();
     }
 
             

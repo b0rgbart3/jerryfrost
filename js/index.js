@@ -393,7 +393,7 @@
             
             console.log('About to fetch paingints...');
 
-            fetch('get_json.php')
+            fetch('get_json.php', { cache: 'no-store' })
             .then(response => response.json())
             .then(data => {
                 console.log('Got data...', data);
