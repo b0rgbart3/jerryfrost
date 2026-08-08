@@ -1,0 +1,295 @@
+
+html {
+    background-color: rgb(160, 160, 160);
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    background-image: url('../interface/stucco3.jpg');
+}
+
+body {
+    margin:0;
+    padding:0;
+}
+
+
+h1 {
+    width:100%;
+    border-bottom:2px solid black;
+}
+
+.previewImage {
+    max-height:300px;
+}
+
+.upload {
+    margin-top:14px;
+    text-transform: uppercase;
+    padding:18px;
+    border-radius: 10px;
+    border:none;
+    background-color: blue;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0 10px black;
+    color: white;
+}
+
+.upload:hover {
+    background-color:rgb(0, 198, 0);;
+}
+
+.hidden {
+    display:none;
+}
+
+.page {
+    background-color:white;
+    border-radius:5px;
+    box-shadow: 0 0 10px rgb(74, 62, 51);
+    padding:40px;
+    text-align: left;
+    margin:40px;    
+    padding-bottom:80px;
+    max-width: 1000px;
+    margin-bottom:180px;
+    margin-top: 120px;
+}
+
+.phone {
+    font-size: 24px;
+    color: rgb(70, 53, 45);
+}
+
+.pageMobile {
+    margin:0;
+    padding:40px;
+    width:100%;
+    max-width:100%;
+    box-sizing: border-box;
+    padding-bottom:180px;
+    padding-top:70px;
+    min-height: 100vh;
+    margin-top:50px;
+}
+
+.page p {
+    padding:0;
+    margin:0;
+    padding-top:8px;
+    padding-left:8px;
+    line-height: 1.75em;
+}
+
+.maillink {
+    color:red;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+.bioPicWrapper {
+    margin: 0 auto;
+    overflow: auto; /* Clear floats */
+}
+
+.bioPic {
+    float: left;
+    margin: 0 10px 10px 0;
+    max-width:400px;
+}
+
+.pageMobile .bioPic {
+    max-width:500px;
+}
+
+.bioText {
+    margin: 0;
+    font-size:17px;
+    line-height:1.76em;
+}
+
+.filters {
+    padding-top:0px;
+    padding-right:20px;
+    padding-bottom:0px;
+    width:100%;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.showFilters {
+    background-color:rgb(181, 181, 181);
+    padding:4px;
+    padding-left:34px;
+    padding-right:34px;
+    border:1px solid black;
+    border-radius: 8px;
+    font-size:13px;
+    width:max-content;
+    margin:auto;
+}
+
+/* .expandedFilterBox {
+    border:4px solid purple;
+    padding-top:100px;
+} */
+
+
+.filters ul {
+    display:flex;
+    justify-content: flex-end;
+}
+
+.filters ul li {
+    border-radius:4px;
+    font-weight: bold;
+    color:rgb(71, 71, 71);
+    display: inline-block;
+    min-width: 100px;
+    border:1px solid rgb(60, 60, 60);
+    background-color:rgb(140, 140, 140);
+    padding:2px;
+    padding-bottom:0;
+    align-items: flex-end;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom:0;
+}
+
+.filters ul li.filterOption {
+    background-color:white;
+}
+
+.filters ul li:hover {
+    background-color:rgb(180, 180, 180);;
+}
+
+
+.queryWrapper {
+    /* border: 3px solid orange; */
+    width: 100%;
+    display:flex;
+    padding-top:10px;
+}
+.queryForm {
+    /* border:2px solid green; */
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(0, 0, 0, .35);
+    margin-left: auto;
+    padding-left:10px;
+}
+
+.mobileFiltersPosition1 {
+    /* border: 4px solid blue; */
+    padding-top:0px;
+    height:80px;
+    opacity:0;
+    overflow: hidden;
+}
+.mobileFiltersPosition2 {
+    opacity: 1;
+    padding-top:90px;
+    /* border:4px solid purple; */
+}
+
+.mobileExpandedQuery {
+    margin-left:auto;
+    margin-right:auto;
+    /* border:4px solid pink; */
+}
+
+
+.queryInput {
+    padding:9px;
+    font-size:16px;
+    background-color:white;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    opacity: .3;
+    font-weight: 700;
+    max-width: calc(80% - 60px);
+}
+
+.queryInput:hover {
+    opacity:.6;
+}
+
+.queryInput:focus {
+    opacity:1;
+    box-shadow: 0 0 8px #8a8783;
+}
+
+.clearQuery {
+    display:inline-block;
+    border:3px solid rgba(0,0,0,1);
+    position: relative;
+    right: 34px;
+    top:6px;
+    padding:4px;
+    border-radius: 50%;
+    width:10px;
+    height: 10px;
+    font-size:10px;
+    font-weight: 700;
+    background-image: url('../interface/close_black.svg');
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: white;
+    opacity: .2;
+    cursor: pointer;
+    user-select: none;
+}
+.clearQuery:hover {
+    opacity:.7;
+}
+
+
+.filterIcon {
+    width:34px;
+    display:inline-block;
+    position: relative;
+    top:14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filterIcon img {
+    background-color:white;
+    opacity:.4;
+    border-radius: 50%;
+}
+
+.filterIcon:hover img {
+    opacity: 1;
+}
+
+
+.userMessage {
+    border-radius:5px;
+    background-color: white;
+    padding:20px;
+    margin:20px;
+    font-size:18px;
+    line-height: 2em;
+    box-shadow: 0 0 8px #8a8783;
+    color: #8a8783;
+}
+
+.userMessage h1 {
+    text-decoration: none;
+}
+
+@media (max-width: 740px) {
+    .bioPic {
+      float: none; /* Reset float for mobile */
+      margin: 0; /* Reset margin for mobile */
+      display: block; /* Display the image as a block element */
+      margin-bottom:20px;
+    }
+  }
+

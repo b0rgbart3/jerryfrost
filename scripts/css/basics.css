@@ -1,0 +1,231 @@
+
+html {
+
+}
+
+body {
+    background-color: rgb(110, 110, 110);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    width:100%;
+    border-bottom:2px solid black;
+}
+
+.previewImage {
+    max-width:300px;
+    max-height:300px;
+    min-width:200px;
+    min-height:200px;
+}
+
+.upload {
+    margin-top:14px;
+    text-transform: uppercase;
+    padding:18px;
+    border-radius: 10px;
+    border:none;
+    background-color: rgb(219, 215, 194);
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+}
+
+.upload:hover {
+    background-color:white;
+}
+
+.hidden {
+    display:none;
+}
+
+.page {
+    background-color:rgba(255,255,255,.8);
+    padding:40px;
+    text-align: left;
+    margin:40px;
+    max-width:900px;
+    box-shadow: 0 0 24px rgba(0,0,0,.5);
+    padding-bottom:80px;
+  
+    margin-bottom:180px;
+}
+
+.pageMobile {
+    margin:0;
+    padding:10px;
+    width:100%;
+    max-width:100%;
+    padding-right:30px;
+    box-sizing: border-box;
+    padding-bottom:180px;
+    padding-top:70px;
+    min-height: 100vh;
+}
+
+.page p {
+    padding:0;
+    margin:0;
+    padding-top:8px;
+    padding-left:8px;
+
+}
+
+
+
+.bioPicWrapper {
+    margin: 0 auto;
+    overflow: auto; /* Clear floats */
+}
+
+.bioPic {
+    float: left;
+    margin: 0 10px 10px 0;
+    max-width:400px;
+}
+
+.pageMobile .bioPic {
+    max-width:300px;
+}
+
+.bioText {
+    margin: 0;
+    font-size:17px;
+    line-height:1.76em;
+}
+
+.filters {
+    padding-top:0px;
+    padding-right:20px;
+    padding-bottom:4px;
+    width:100%;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+.mobileFiltersPosition1 {
+    padding-top:0px;
+    height:80px;
+    opacity:0;
+    overflow: hidden;
+}
+.mobileFiltersPosition2 {
+    opacity: 1;
+    height:auto;
+    padding-top:90px;
+}
+
+.showFilters {
+    background-color:rgb(181, 181, 181);
+    padding:4px;
+    padding-left:34px;
+    padding-right:34px;
+    border:1px solid black;
+    border-radius: 8px;
+    font-size:13px;
+    width:max-content;
+    margin:auto;
+}
+
+.expandedFilterBox {
+    padding-top:100px;
+}
+
+
+.filters ul {
+    display:flex;
+    justify-content: flex-end;
+}
+
+.filters ul li {
+    border-radius:4px;
+    font-weight: bold;
+    color:rgb(71, 71, 71);
+    display: inline-block;
+    min-width: 100px;
+    border:1px solid rgb(60, 60, 60);
+    background-color:rgb(140, 140, 140);
+    padding:2px;
+    padding-bottom:0;
+    align-items: flex-end;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom:0;
+}
+
+.filters ul li.filterOption {
+    background-color:white;
+}
+
+.filters ul li:hover {
+    background-color:rgb(180, 180, 180);;
+}
+
+
+.queryForm {
+    float:right;
+    display:inline-block;
+}
+
+.queryInput {
+    padding:6px;
+    font-size:16px;
+    background-color:rgba(255,255,255,.4);
+    border-radius: 8px;
+}
+
+
+.filterIcon {
+    width:34px;
+    display:inline-block;
+    position: relative;
+    top:14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filterIcon img {
+    background-color:white;
+    opacity:.4;
+    border-radius: 50%;
+}
+
+.filterIcon:hover img {
+    opacity: 1;
+}
+
+/* .mobileQuery {
+    position: relative;
+    top:0px;
+    margin-top:-24px;
+    padding-bottom:1px;
+    box-shadow: 0 0 8px rgba(0,0,0,.4);
+    margin-bottom:0;
+} */
+
+.extras {
+    background-color:rgb(110, 110, 110);
+    width:100vw;
+    box-sizing: border-box;
+    position:absolute;
+    top:0;
+}
+
+.extrasMobile {
+    box-shadow:0 0 14px black;
+    top:0px;
+    position:relative;
+
+}
+
+
+
+@media (max-width: 740px) {
+    .bioPic {
+      float: none; /* Reset float for mobile */
+      margin: 0; /* Reset margin for mobile */
+      display: block; /* Display the image as a block element */
+      margin-bottom:20px;
+    }
+  }
+

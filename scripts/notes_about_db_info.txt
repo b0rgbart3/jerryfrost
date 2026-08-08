@@ -1,0 +1,28 @@
+<!--
+
+
+
+
+BlueHost LIVE
+define("DB_HOST",  "localhost" );
+    define("DB_USER",  "jerryfro_bartdor");
+    define("DB_PW",    "zbgy]j;i)Z?f");
+    define("DB_NAME",  "jerryfro_art"); 
+
+
+case "clients":
+   // echo "<h2>Test Server</h2>";
+    define("DB_HOST",  "mysql.ddworks.org" );
+    define("DB_USER",  "bartdority79");
+    define("DB_PW",    "IjlB4324j");
+    define("DB_NAME",  "ddw_jerry"); 
+    break;
+
+    case "jerry":
+    define("DB_HOST",  "127.0.0.1" );
+    define("DB_USER",  "bartdority");
+    define("DB_PW",    "indiGlow79");
+    define("DB_NAME",  "ddw_jerry"); 
+    break;
+
+-->
